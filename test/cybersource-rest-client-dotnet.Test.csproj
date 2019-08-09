@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!--
 CyberSource Merged Spec
 
@@ -37,12 +37,6 @@ OpenAPI spec version: 0.0.1
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="nunit.framework">
-      <HintPath>..\packages\NUnit.2.6.4\lib\nunit.framework.dll</HintPath>
-    </Reference>
-    <Reference Include="RestSharp">
-      <HintPath>..\packages\RestSharp.106.5.4\lib\net452\RestSharp.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -55,20 +49,26 @@ OpenAPI spec version: 0.0.1
     <Reference Include="Newtonsoft.Json">
       <HintPath>packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="RestSharp">
+        <HintPath>packages\RestSharp.106.5.4\lib\net452\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework">
+        <HintPath>packages\NUnit.2.6.4\lib\nunit.framework.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="**\*.cs" Exclude="obj\**" />
+    <Compile Include="**\*.cs"
+             Exclude="obj\**"/>
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config">
-      <SubType>Designer</SubType>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\cybersource-rest-client-dotnet.csproj">
-      <Project>{4bdbbbf5-440a-4b94-abfa-91fb8ff61069}</Project>
-      <Name>cybersource-rest-client-dotnet</Name>
-    </ProjectReference>
+      <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MsBuildToolsPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+      <ProjectReference Include="..\cybersource-rest-client-dotnet.csproj">
+          <Project>{085CA0A1-F34A-4E5F-AD9D-6EC8EF55E5FE}</Project>
+          <Name>cybersource-rest-client-dotnet</Name>
+      </ProjectReference>
+  </ItemGroup>
 </Project>
+

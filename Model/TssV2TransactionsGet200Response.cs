@@ -36,7 +36,7 @@ namespace CyberSource.Model
         /// <param name="Id">An unique identification number assigned by CyberSource to identify the submitted request. It is also appended to the endpoint of the resource..</param>
         /// <param name="RootId">Payment Request Id.</param>
         /// <param name="ReconciliationId">The reconciliation id for the submitted transaction. This value is not returned for all processors. .</param>
-        /// <param name="MerchantId">The description for this field is not available..</param>
+        /// <param name="MerchantId">Your CyberSource merchant ID..</param>
         /// <param name="Status">The status of the submitted transaction..</param>
         /// <param name="SubmitTimeUTC">Time of request in UTC. Format: &#x60;YYYY-MM-DDThh:mm:ssZ&#x60; Example &#x60;2016-08-11T22:47:57Z&#x60; equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The &#x60;T&#x60; separates the date and the time. The &#x60;Z&#x60; indicates UTC. .</param>
         /// <param name="ApplicationInformation">ApplicationInformation.</param>
@@ -47,7 +47,7 @@ namespace CyberSource.Model
         /// <param name="ErrorInformation">ErrorInformation.</param>
         /// <param name="InstallmentInformation">InstallmentInformation.</param>
         /// <param name="FraudMarkingInformation">FraudMarkingInformation.</param>
-        /// <param name="MerchantDefinedInformation">The description for this field is not available..</param>
+        /// <param name="MerchantDefinedInformation">The object containing the custom data that the merchant defines. .</param>
         /// <param name="MerchantInformation">MerchantInformation.</param>
         /// <param name="OrderInformation">OrderInformation.</param>
         /// <param name="PaymentInformation">PaymentInformation.</param>
@@ -107,9 +107,9 @@ namespace CyberSource.Model
         public string ReconciliationId { get; set; }
 
         /// <summary>
-        /// The description for this field is not available.
+        /// Your CyberSource merchant ID.
         /// </summary>
-        /// <value>The description for this field is not available.</value>
+        /// <value>Your CyberSource merchant ID.</value>
         [DataMember(Name="merchantId", EmitDefaultValue=false)]
         public string MerchantId { get; set; }
 
@@ -176,9 +176,9 @@ namespace CyberSource.Model
         public TssV2TransactionsGet200ResponseFraudMarkingInformation FraudMarkingInformation { get; set; }
 
         /// <summary>
-        /// The description for this field is not available.
+        /// The object containing the custom data that the merchant defines. 
         /// </summary>
-        /// <value>The description for this field is not available.</value>
+        /// <value>The object containing the custom data that the merchant defines. </value>
         [DataMember(Name="merchantDefinedInformation", EmitDefaultValue=false)]
         public List<Ptsv2paymentsMerchantDefinedInformation> MerchantDefinedInformation { get; set; }
 

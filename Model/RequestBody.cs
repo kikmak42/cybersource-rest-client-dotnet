@@ -31,39 +31,12 @@ namespace CyberSource.Model
     public partial class RequestBody :  IEquatable<RequestBody>, IValidatableObject
     {
         /// <summary>
-        ///  Format of the report
-        /// </summary>
-        /// <value> Format of the report</value>
-        [JsonConverter(typeof(StringEnumConverter))]
-        public enum ReportMimeTypeEnum
-        {
-            
-            /// <summary>
-            /// Enum ApplicationXml for "application/xml"
-            /// </summary>
-            [EnumMember(Value = "application/xml")]
-            ApplicationXml,
-            
-            /// <summary>
-            /// Enum TextCsv for "text/csv"
-            /// </summary>
-            [EnumMember(Value = "text/csv")]
-            TextCsv
-        }
-
-        /// <summary>
-        ///  Format of the report
-        /// </summary>
-        /// <value> Format of the report</value>
-        [DataMember(Name="reportMimeType", EmitDefaultValue=false)]
-        public ReportMimeTypeEnum? ReportMimeType { get; set; }
-        /// <summary>
         /// Initializes a new instance of the <see cref="RequestBody" /> class.
         /// </summary>
         /// <param name="OrganizationId">Valid CyberSource Organization Id.</param>
         /// <param name="ReportDefinitionName">ReportDefinitionName.</param>
         /// <param name="ReportFields">List of fields which needs to get included in a report.</param>
-        /// <param name="ReportMimeType"> Format of the report.</param>
+        /// <param name="ReportMimeType">&#39;Format of the report&#39;                  Valid values: - application/xml - text/csv .</param>
         /// <param name="ReportName">Name of the report.</param>
         /// <param name="Timezone">Timezone of the report.</param>
         /// <param name="ReportStartTime">Start time of the report.</param>
@@ -71,7 +44,7 @@ namespace CyberSource.Model
         /// <param name="ReportFilters">List of filters to apply.</param>
         /// <param name="ReportPreferences">ReportPreferences.</param>
         /// <param name="GroupName">Specifies the group name.</param>
-        public RequestBody(string OrganizationId = default(string), string ReportDefinitionName = default(string), List<string> ReportFields = default(List<string>), ReportMimeTypeEnum? ReportMimeType = default(ReportMimeTypeEnum?), string ReportName = default(string), string Timezone = default(string), DateTime? ReportStartTime = default(DateTime?), DateTime? ReportEndTime = default(DateTime?), Dictionary<string, List<string>> ReportFilters = default(Dictionary<string, List<string>>), Reportingv3reportsReportPreferences ReportPreferences = default(Reportingv3reportsReportPreferences), string GroupName = default(string))
+        public RequestBody(string OrganizationId = default(string), string ReportDefinitionName = default(string), List<string> ReportFields = default(List<string>), string ReportMimeType = default(string), string ReportName = default(string), string Timezone = default(string), DateTime? ReportStartTime = default(DateTime?), DateTime? ReportEndTime = default(DateTime?), Dictionary<string, List<string>> ReportFilters = default(Dictionary<string, List<string>>), Reportingv3reportsReportPreferences ReportPreferences = default(Reportingv3reportsReportPreferences), string GroupName = default(string))
         {
             this.OrganizationId = OrganizationId;
             this.ReportDefinitionName = ReportDefinitionName;
@@ -106,6 +79,12 @@ namespace CyberSource.Model
         [DataMember(Name="reportFields", EmitDefaultValue=false)]
         public List<string> ReportFields { get; set; }
 
+        /// <summary>
+        /// &#39;Format of the report&#39;                  Valid values: - application/xml - text/csv 
+        /// </summary>
+        /// <value>&#39;Format of the report&#39;                  Valid values: - application/xml - text/csv </value>
+        [DataMember(Name="reportMimeType", EmitDefaultValue=false)]
+        public string ReportMimeType { get; set; }
 
         /// <summary>
         /// Name of the report

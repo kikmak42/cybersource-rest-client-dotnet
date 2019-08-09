@@ -163,9 +163,9 @@ namespace CyberSource.Model
             }
 
             // IpAddress (string) maxLength
-            if(this.IpAddress != null && this.IpAddress.Length > 15)
+            if(this.IpAddress != null && this.IpAddress.Length > 48)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IpAddress, length must be less than 15.", new [] { "IpAddress" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IpAddress, length must be less than 48.", new [] { "IpAddress" });
             }
 
             // UserAgent (string) maxLength

@@ -42,7 +42,7 @@ namespace CyberSource.Model
         /// <param name="ResponseCodeSource">Used by Visa only and contains the response source/reason code that identifies the source of the response decision. .</param>
         /// <param name="ResponseDetails">This field might contain information about a decline. This field is supported only for **CyberSource through VisaNet**. .</param>
         /// <param name="ResponseCategoryCode">Processor-defined response category code. The associated detail error code is in the &#x60;responseCode&#x60; field of the service you requested.  This field is supported only for:   - Japanese issuers  - Domestic transactions in Japan  - Comercio Latino—processor transaction ID required for troubleshooting  **Maximum length for processors**:   - Comercio Latino: 32  - All other processors: 3 .</param>
-        /// <param name="ForwardedAcquirerCode">Name of the Japanese acquirer that processed the transaction. Returned only for CCS (CAFIS) and JCN Gateway. Please contact the CyberSource Japan Support Group for more information. .</param>
+        /// <param name="ForwardedAcquirerCode">Name of the Japanese acquirer that processed the transaction. Returned only for JCN Gateway. Please contact the CyberSource Japan Support Group for more information. .</param>
         /// <param name="Avs">Avs.</param>
         /// <param name="CardVerification">CardVerification.</param>
         /// <param name="MerchantAdvice">MerchantAdvice.</param>
@@ -157,9 +157,9 @@ namespace CyberSource.Model
         public string ResponseCategoryCode { get; set; }
 
         /// <summary>
-        /// Name of the Japanese acquirer that processed the transaction. Returned only for CCS (CAFIS) and JCN Gateway. Please contact the CyberSource Japan Support Group for more information. 
+        /// Name of the Japanese acquirer that processed the transaction. Returned only for JCN Gateway. Please contact the CyberSource Japan Support Group for more information. 
         /// </summary>
-        /// <value>Name of the Japanese acquirer that processed the transaction. Returned only for CCS (CAFIS) and JCN Gateway. Please contact the CyberSource Japan Support Group for more information. </value>
+        /// <value>Name of the Japanese acquirer that processed the transaction. Returned only for JCN Gateway. Please contact the CyberSource Japan Support Group for more information. </value>
         [DataMember(Name="forwardedAcquirerCode", EmitDefaultValue=false)]
         public string ForwardedAcquirerCode { get; set; }
 

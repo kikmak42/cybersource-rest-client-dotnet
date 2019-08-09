@@ -35,12 +35,12 @@ namespace CyberSource.Model
         /// </summary>
         /// <param name="Cavv">Cardholder authentication verification value (CAVV)..</param>
         /// <param name="CavvAlgorithm">Algorithm used to generate the CAVV for Visa Secure or the UCAF authentication data for Mastercard Identity Check. .</param>
-        /// <param name="EciRaw">Raw electronic commerce indicator (ECI). For the description and requirements, see \&quot;Payer Authentication,\&quot; page 180..</param>
-        /// <param name="ParesStatus">Payer authentication response status. For the description and requirements, see \&quot;Payer Authentication,\&quot; page 180. .</param>
-        /// <param name="VeresEnrolled">Verification response enrollment status. For the description and requirements, see \&quot;Payer Authentication,\&quot; page 180..</param>
-        /// <param name="Xid">Transaction identifier. For the description and requirements, see \&quot;Payer Authentication,\&quot; page 180..</param>
-        /// <param name="UcafAuthenticationData">Universal cardholder authentication field (UCAF) data.  For the description and requirements, see \&quot;Payer Authentication,\&quot; page 180. .</param>
-        /// <param name="UcafCollectionIndicator">Universal cardholder authentication field (UCAF) collection indicator.  For the description and requirements, see \&quot;Payer Authentication,\&quot; page 180.  **CyberSource through VisaNet**\\ The value for this field corresponds to the following data in the TC 33 capture file5: - Record: CP01 TCR7 - Position: 5 - Field: Mastercard Electronic Commerce Indicators—-UCAF Collection Indicator .</param>
+        /// <param name="EciRaw">Raw electronic commerce indicator (ECI).  For details, see &#x60;eci_raw&#x60; request field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) .</param>
+        /// <param name="ParesStatus">Payer authentication response status.  For details, see &#x60;pares_status&#x60; request field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) .</param>
+        /// <param name="VeresEnrolled">Verification response enrollment status.  For details, see &#x60;veres_enrolled&#x60; request field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) .</param>
+        /// <param name="Xid">Transaction identifier.  For details, see &#x60;xid&#x60; request field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) .</param>
+        /// <param name="UcafAuthenticationData">Universal cardholder authentication field (UCAF) data.  For details, see &#x60;ucaf_authentication_data&#x60; request field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) .</param>
+        /// <param name="UcafCollectionIndicator">Universal cardholder authentication field (UCAF) collection indicator.  For details, see &#x60;ucaf_collection_indicator&#x60; request field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm)  #### CyberSource through VisaNet The value for this field corresponds to the following data in the TC 33 capture file5: - Record: CP01 TCR7 - Position: 5 - Field: Mastercard Electronic Commerce Indicators—UCAF Collection Indicator .</param>
         public Ptsv2paymentsConsumerAuthenticationInformation(string Cavv = default(string), string CavvAlgorithm = default(string), string EciRaw = default(string), string ParesStatus = default(string), string VeresEnrolled = default(string), string Xid = default(string), string UcafAuthenticationData = default(string), string UcafCollectionIndicator = default(string))
         {
             this.Cavv = Cavv;
@@ -68,44 +68,44 @@ namespace CyberSource.Model
         public string CavvAlgorithm { get; set; }
 
         /// <summary>
-        /// Raw electronic commerce indicator (ECI). For the description and requirements, see \&quot;Payer Authentication,\&quot; page 180.
+        /// Raw electronic commerce indicator (ECI).  For details, see &#x60;eci_raw&#x60; request field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
         /// </summary>
-        /// <value>Raw electronic commerce indicator (ECI). For the description and requirements, see \&quot;Payer Authentication,\&quot; page 180.</value>
+        /// <value>Raw electronic commerce indicator (ECI).  For details, see &#x60;eci_raw&#x60; request field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) </value>
         [DataMember(Name="eciRaw", EmitDefaultValue=false)]
         public string EciRaw { get; set; }
 
         /// <summary>
-        /// Payer authentication response status. For the description and requirements, see \&quot;Payer Authentication,\&quot; page 180. 
+        /// Payer authentication response status.  For details, see &#x60;pares_status&#x60; request field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
         /// </summary>
-        /// <value>Payer authentication response status. For the description and requirements, see \&quot;Payer Authentication,\&quot; page 180. </value>
+        /// <value>Payer authentication response status.  For details, see &#x60;pares_status&#x60; request field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) </value>
         [DataMember(Name="paresStatus", EmitDefaultValue=false)]
         public string ParesStatus { get; set; }
 
         /// <summary>
-        /// Verification response enrollment status. For the description and requirements, see \&quot;Payer Authentication,\&quot; page 180.
+        /// Verification response enrollment status.  For details, see &#x60;veres_enrolled&#x60; request field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
         /// </summary>
-        /// <value>Verification response enrollment status. For the description and requirements, see \&quot;Payer Authentication,\&quot; page 180.</value>
+        /// <value>Verification response enrollment status.  For details, see &#x60;veres_enrolled&#x60; request field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) </value>
         [DataMember(Name="veresEnrolled", EmitDefaultValue=false)]
         public string VeresEnrolled { get; set; }
 
         /// <summary>
-        /// Transaction identifier. For the description and requirements, see \&quot;Payer Authentication,\&quot; page 180.
+        /// Transaction identifier.  For details, see &#x60;xid&#x60; request field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
         /// </summary>
-        /// <value>Transaction identifier. For the description and requirements, see \&quot;Payer Authentication,\&quot; page 180.</value>
+        /// <value>Transaction identifier.  For details, see &#x60;xid&#x60; request field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) </value>
         [DataMember(Name="xid", EmitDefaultValue=false)]
         public string Xid { get; set; }
 
         /// <summary>
-        /// Universal cardholder authentication field (UCAF) data.  For the description and requirements, see \&quot;Payer Authentication,\&quot; page 180. 
+        /// Universal cardholder authentication field (UCAF) data.  For details, see &#x60;ucaf_authentication_data&#x60; request field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
         /// </summary>
-        /// <value>Universal cardholder authentication field (UCAF) data.  For the description and requirements, see \&quot;Payer Authentication,\&quot; page 180. </value>
+        /// <value>Universal cardholder authentication field (UCAF) data.  For details, see &#x60;ucaf_authentication_data&#x60; request field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) </value>
         [DataMember(Name="ucafAuthenticationData", EmitDefaultValue=false)]
         public string UcafAuthenticationData { get; set; }
 
         /// <summary>
-        /// Universal cardholder authentication field (UCAF) collection indicator.  For the description and requirements, see \&quot;Payer Authentication,\&quot; page 180.  **CyberSource through VisaNet**\\ The value for this field corresponds to the following data in the TC 33 capture file5: - Record: CP01 TCR7 - Position: 5 - Field: Mastercard Electronic Commerce Indicators—-UCAF Collection Indicator 
+        /// Universal cardholder authentication field (UCAF) collection indicator.  For details, see &#x60;ucaf_collection_indicator&#x60; request field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm)  #### CyberSource through VisaNet The value for this field corresponds to the following data in the TC 33 capture file5: - Record: CP01 TCR7 - Position: 5 - Field: Mastercard Electronic Commerce Indicators—UCAF Collection Indicator 
         /// </summary>
-        /// <value>Universal cardholder authentication field (UCAF) collection indicator.  For the description and requirements, see \&quot;Payer Authentication,\&quot; page 180.  **CyberSource through VisaNet**\\ The value for this field corresponds to the following data in the TC 33 capture file5: - Record: CP01 TCR7 - Position: 5 - Field: Mastercard Electronic Commerce Indicators—-UCAF Collection Indicator </value>
+        /// <value>Universal cardholder authentication field (UCAF) collection indicator.  For details, see &#x60;ucaf_collection_indicator&#x60; request field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm)  #### CyberSource through VisaNet The value for this field corresponds to the following data in the TC 33 capture file5: - Record: CP01 TCR7 - Position: 5 - Field: Mastercard Electronic Commerce Indicators—UCAF Collection Indicator </value>
         [DataMember(Name="ucafCollectionIndicator", EmitDefaultValue=false)]
         public string UcafCollectionIndicator { get; set; }
 
